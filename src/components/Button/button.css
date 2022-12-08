@@ -1,6 +1,5 @@
 .button {
 	color: #ffffff;
-	font-family: var(--corpsite-font-header-s-h2-font-family);
 	line-height: 1.4rem;
 	align-items: center;
 	font-weight: 500;
@@ -10,8 +9,14 @@
 	min-width: min-content;
 	cursor: pointer;
 	padding: 0.75rem 4rem;
-	height: 3rem;
+	height: 2rem;
 	font-size: 18px;
-	background-color: #3782ff;
-	border: 1px solid #7aabff;
+	background-color: #05091e;
+	border: 1px solid #05091e;
+	transition: 0.3s;
+}
+
+.button:hover {
+	background-color: var(--c-gray);
+	border: 1px solid var(--c-gray);
 }

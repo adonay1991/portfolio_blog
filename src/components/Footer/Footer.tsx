@@ -5,7 +5,7 @@ export const Footer: Component = () => {
 	return (
 		<footer class={'footer'}>
 			&copy; {new Date().getFullYear()} Adonay Rodriguez
-			<small class={'byline'}>🚀 Built by Astro</small>
+			<small class={'byline'}>🚀 Built with Astro</small>
 		</footer>
 	)
 }
