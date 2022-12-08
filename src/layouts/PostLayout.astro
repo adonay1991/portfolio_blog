@@ -1,0 +1,47 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Footer from '../components/Footer/Footer';
+import Nav from '../components/Nav/Navbar';
+import Button from '../components/Button/Button';
+
+export interface Props {
+	title: string;
+	description: string;
+	date: string;
+	image: string;
+	author: string;
+}
+
+const {
+	frontmatter: { title, description, date, image, author },
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<MainHead title={title} description={description} />
+	</head>
+	<body>
+		<Nav />
+		<header style={`background-image:url(${image})`} class="hero">
+			<h1 class="title">{title}</h1>
+			<em>Written by: {author}</em>
+			Published on: {date && <time>{date}</time>}
+		</header>
+		<div class="leadIn">
+			<div class="wrapper pt8 pb8 mb8 tac">
+				<slot />
+			</div>
+		</div>
+		<div class="wrapper wrapper__readable">
+			<div class="content"><slot /></div>
+		</div>
+		<footer class="tac mt6">
+			<a href="/projects">
+				<Button>View More</Button>
+			</a>
+		</footer>
+		<Footer />
+	</body>
+</html>

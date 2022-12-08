@@ -1,0 +1,34 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav/Navbar';
+import Footer from '../components/Footer/Footer';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<MainHead
+		title="Blog page"
+		description="A page to display all our blog posts"
+	/>
+	<body>
+		<Nav />
+		<div class="wrapper">
+			<h1 class="title mt4 mb4">All Post</h1>
+			<main class="blog-grid">
+				<slot />
+			</main>
+		</div>
+		<style>
+			body {
+				margin: 0;
+				background-color: #fff;
+				width: 100%;
+			}
+			.layout {
+				max-width: 1280px;
+				margin: 0 auto;
+			}
+		</style>
+		<Footer />
+	</body>
+</html>
