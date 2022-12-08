@@ -8,12 +8,12 @@ export interface Props {
 	title: string;
 	description: string;
 	date: string;
-	image: string;
+	img: string;
 	author: string;
 }
 
 const {
-	frontmatter: { title, description, date, image, author },
+	frontmatter: { title, description, date, img, author },
 } = Astro.props;
 ---
 
@@ -21,10 +21,17 @@ const {
 <html lang="en">
 	<head>
 		<MainHead title={title} description={description} />
+		<style>
+			.layout-button {
+				display: flex;
+				justify-content: center;
+				text-decoration: none;
+			}
+		</style>
 	</head>
 	<body>
 		<Nav />
-		<header style={`background-image:url(${image})`} class="hero">
+		<header style={`background-image:url(${img})`} class="hero">
 			<h1 class="title">{title}</h1>
 			<em>Written by: {author}</em>
 			Published on: {date && <time>{date}</time>}
@@ -37,11 +44,11 @@ const {
 		<div class="wrapper wrapper__readable">
 			<div class="content"><slot /></div>
 		</div>
-		<footer class="tac mt6">
-			<a href="/projects">
+		<div class="tac mt6">
+			<a href="/projects" class="layout-button">
 				<Button>View More</Button>
 			</a>
-		</footer>
+		</div>
 		<Footer />
 	</body>
 </html>
