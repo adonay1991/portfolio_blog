@@ -3,7 +3,7 @@ import MainHead from '../components/MainHead.astro';
 import Navbar from '../components/Nav/Navbar';
 import Button from '../components/Button/Button';
 import Footer from '../components/Footer/Footer';
-import BlogPreview from '../components/BlogPreview/BlogPreview';
+import CardPreview from '../components/CardPreview/CardPreview';
 
 const posts = await Astro.glob('../pages/blog/**/*.md');
 const projects = await Astro.glob('../pages/projects/**/*.md');
@@ -191,7 +191,7 @@ const featuredPost = posts[0];
 			<div class="grid">
 				<div class="section">
 					<h3 class="sectionTitle">Selected Work</h3>
-					<BlogPreview
+					<CardPreview
 						url={'/projects/' + featuredProject.frontmatter.slug}
 						img={featuredProject.frontmatter.img}
 						date={featuredProject.frontmatter.date}
@@ -204,7 +204,7 @@ const featuredPost = posts[0];
 						<Button>View All Projects</Button>
 					</a>
 					<h3 class="sectionTitle">Blog</h3>
-					<BlogPreview
+					<CardPreview
 						url={'/blog/' + featuredPost.frontmatter.slug}
 						img={featuredPost.frontmatter.img}
 						date={featuredPost.frontmatter.date}

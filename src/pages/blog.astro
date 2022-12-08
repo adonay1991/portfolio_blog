@@ -1,6 +1,6 @@
 ---
 import BlogLayout from '../layouts/BlogLayout.astro';
-import BlogPreview from '../components/BlogPreview/BlogPreview';
+import CardPreview from '../components/CardPreview/CardPreview';
 
 const posts = await Astro.glob('../pages/blog/**/*.md');
 const sortedPosts = posts
@@ -17,7 +17,7 @@ const sortedPosts = posts
 		<div class="container">
 			{
 				sortedPosts.map((post) => (
-					<BlogPreview
+					<CardPreview
 						url={'/blog/' + post.frontmatter.slug}
 						img={post.frontmatter.img}
 						date={post.frontmatter.date}

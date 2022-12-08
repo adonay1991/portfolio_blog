@@ -1,4 +1,4 @@
-export type BlogProps = {
+export type CardProps = {
 	url: string;
 	img: string;
 	title: string;

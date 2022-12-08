@@ -1,11 +1,12 @@
-.card {
+.card-blog {
 	position: relative;
 	color: var(--t-bg);
 	background: var(--t-fg);
 	border: 1px solid #f0f0f0;
+	border-radius: 10px;
 }
 
-.title {
+.title-blog {
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -34,7 +35,7 @@
 	line-height: 1.4;
 }
 
-.link {
+.link-blog {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -54,13 +55,14 @@
 	transition: opacity 150ms linear;
 }
 
-.link:focus,
-.link:hover {
+.link-blog:focus,
+.link-blog:hover {
 	opacity: 1;
+	border-radius: 10px;
 }
 
-.link:focus .linkInner,
-.link:hover .linkInner {
+.link-blog:focus .linkInner,
+.link-blog:hover .linkInner {
 	transform: translateY(0);
 	border-color: rgba(255, 255, 255, 0.625);
 }
@@ -71,11 +73,6 @@
 	transition: transform 300ms cubic-bezier(0, 0.4, 0.6, 1),
 		border-color 1s linear;
 	transform: translateY(25%);
-}
-
-.nav {
-	display: flex;
-	justify-content: flex-end;
 }
 
 .tags {
