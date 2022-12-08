@@ -1,0 +1,41 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import BlogPreview from '../components/BlogPreview/BlogPreview';
+
+const posts = await Astro.glob('../pages/blog/**/*.md');
+const sortedPosts = posts
+	.filter((post) => !!post.frontmatter.date)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.date).valueOf() -
+			new Date(a.frontmatter.date).valueOf()
+	);
+---
+
+<BlogLayout title="Blog">
+	<section>
+		<div class="container">
+			{
+				sortedPosts.map((post) => (
+					<BlogPreview
+						url={'/blog/' + post.frontmatter.slug}
+						img={post.frontmatter.image}
+						date={post.frontmatter.date}
+						title={post.frontmatter.title}
+						tags={post.frontmatter.tags}
+						date={post.frontmatter.date}
+						description={post.frontmatter.description}
+					/>
+				))
+			}
+		</div>
+	</section>
+</BlogLayout>
+<style lang="css">
+	ul {
+		display: grid;
+		grid-gap: 2rem;
+		grid-template-columns: repeat(3, 1fr);
+		list-style-type: none;
+	}
+</style>
