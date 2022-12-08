@@ -19,11 +19,18 @@ const featuredPost = posts[0];
 				position: relative;
 				overflow: hidden;
 			}
+
+			@media (min-width: 360px) {
+				.home-hero {
+					height: 70vw;
+				}
+			}
 			@media (min-width: 750px) {
 				.home-hero {
 					height: 42vw;
 				}
 			}
+
 			.img {
 				display: block;
 				width: 100%;
