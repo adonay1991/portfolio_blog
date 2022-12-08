@@ -2,9 +2,9 @@
 import BlogLayout from '../layouts/BlogLayout.astro';
 import BlogPreview from '../components/BlogPreview/BlogPreview';
 
-const posts = await Astro.glob('../pages/projects/**/*.md');
-const sortedPosts = posts
-	.filter((post) => !!post.frontmatter.date)
+const projects = await Astro.glob('../pages/projects/**/*.md');
+const sortedPosts = projects
+	.filter((projects) => !!projects.frontmatter.date)
 	.sort(
 		(a, b) =>
 			new Date(b.frontmatter.date).valueOf() -
@@ -16,26 +16,18 @@ const sortedPosts = posts
 	<section>
 		<div class="container">
 			{
-				sortedPosts.map((post) => (
+				sortedPosts.map((projects) => (
 					<BlogPreview
-						url={'/projects/' + post.frontmatter.slug}
-						img={post.frontmatter.image}
-						date={post.frontmatter.date}
-						title={post.frontmatter.title}
-						tags={post.frontmatter.tags}
-						date={post.frontmatter.date}
-						description={post.frontmatter.description}
+						url={'/projects/' + projects.frontmatter.slug}
+						img={projects.frontmatter.img}
+						date={projects.frontmatter.date}
+						title={projects.frontmatter.title}
+						tags={projects.frontmatter.tags}
+						date={projects.frontmatter.date}
+						description={projects.frontmatter.description}
 					/>
 				))
 			}
 		</div>
 	</section>
 </BlogLayout>
-<style lang="css">
-	ul {
-		display: grid;
-		grid-gap: 2rem;
-		grid-template-columns: repeat(3, 1fr);
-		list-style-type: none;
-	}
-</style>
