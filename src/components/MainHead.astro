@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const {
+	title = 'Adonay Rodriguez: Personal Site',
+	description = 'The personal site of Adonay Rodriguez',
+} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<title>{title}</title>
+
+<link rel="icon" type="image/x-icon" href="" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
+	rel="stylesheet"
+/>
