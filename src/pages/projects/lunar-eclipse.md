@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: Lunar Eclipse
-client: Self
+author: Self
 date: 06/12/2022
 slug: lunar-eclipse
 img: https://images.unsplash.com/photo-1548391350-1a529f6ea42d?fit=crop&w=1400&h=700&q=75
