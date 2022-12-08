@@ -1,9 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/solid-js': ^1.2.3
-  astro: ^1.6.13
-  solid-js: ^1.6.3
+  '@astrojs/solid-js': 1.2.3
+  astro: 1.6.13
+  solid-js: 1.6.3
 
 dependencies:
   '@astrojs/solid-js': 1.2.3_solid-js@1.6.3
