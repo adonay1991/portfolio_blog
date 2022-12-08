@@ -11,7 +11,7 @@ export const Button: Component<ButtonProps> = (userProps: ButtonProps) => {
 
 	return (
 		<button
-			class={'button'}
+			class='button'
 			disabled={props.isDisabled}
 			id={props.id ? props.id : ''}
 		>
