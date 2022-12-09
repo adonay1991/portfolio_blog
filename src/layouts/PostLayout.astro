@@ -31,23 +31,19 @@ const {
 	</head>
 	<body>
 		<Nav />
-		<header style={`background-image:url(${img})`} class="hero">
-			<h1 class="title">{title}</h1>
-			<em>Written by: {author}</em>
-			Published on: {date && <time>{date}</time>}
-		</header>
-		<div class="leadIn">
-			<div class="wrapper pt8 pb8 mb8 tac">
-				<slot />
+		<div class="wrapper">
+			<div class="heroImg">
+				<img width="1400" height="350" src={img} />
 			</div>
-		</div>
-		<div class="wrapper wrapper__readable">
-			<div class="content"><slot /></div>
-		</div>
-		<div class="tac mt6">
-			<a href="/projects" class="layout-button">
-				<Button>View More</Button>
-			</a>
+			<div class="bio wrapper wrapper__readable mt8">
+				<h1 class="title">{title}</h1>
+				<div class="content"><slot /></div>
+			</div>
+			<div class="tac mt6">
+				<a href="/blog" class="layout-button">
+					<Button>View More</Button>
+				</a>
+			</div>
 		</div>
 		<Footer />
 	</body>
