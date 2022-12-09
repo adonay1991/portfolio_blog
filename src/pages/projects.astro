@@ -1,6 +1,6 @@
 ---
-import BlogLayout from '../layouts/BlogLayout.astro';
-import CardPreview from '../components/CardPreview/CardPreview';
+import BlogLayout from '@layouts/BlogLayout.astro';
+import CardPreview from '@components/CardPreview/CardPreview';
 
 const projects = await Astro.glob('../pages/projects/**/*.md');
 const sortedPosts = projects
