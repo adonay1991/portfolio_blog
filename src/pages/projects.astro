@@ -1,6 +1,5 @@
 ---
 import BlogLayout from '@layouts/BlogLayout.astro';
-import ProjectsLayout from '@layouts/ProjectsLayout.astro';
 import CardPreview from '@components/CardPreview/CardPreview';
 
 const projects = await Astro.glob('../pages/projects/**/*.md');
@@ -13,7 +12,7 @@ const sortedPosts = projects
 	);
 ---
 
-<ProjectsLayout title="Blog">
+<BlogLayout title="Projects">
 	<section>
 		<div class="container">
 			{
@@ -31,4 +30,4 @@ const sortedPosts = projects
 			}
 		</div>
 	</section>
-</ProjectsLayout>
+</BlogLayout>
