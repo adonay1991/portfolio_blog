@@ -8,7 +8,7 @@ export const Navbar: Component = () => {
 				<div class='monogram'> AR </div>
 			</a>
 			<a class='link' href="/projects">Portfolio</a>
-			<a class='link' href="/about">About</a>
+			<a class='link' href="/about">About me</a>
 			<a class='link' href="/blog">Blog</a>
 			<a class='social' href="https://www.linkedin.com/in/adonay-rodriguez-0243a0175/" target="_blank">
 				<svg class='socialicon' fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
