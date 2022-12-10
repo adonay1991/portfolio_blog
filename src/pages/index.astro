@@ -7,7 +7,7 @@ import CardPreview from '@components/CardPreview/CardPreview';
 
 const posts = await Astro.glob('../pages/blog/**/*.md');
 const projects = await Astro.glob('../pages/projects/**/*.md');
-const featuredProject = projects[0];
+const featuredProject = projects[1];
 const featuredPost = posts[0];
 ---
 
@@ -87,15 +87,6 @@ const featuredPost = posts[0];
 					font-size: var(--f-u12);
 				}
 			}
-			.grid {
-				display: grid;
-				grid-gap: 2rem;
-			}
-			@media (min-width: 1200px) {
-				.grid {
-					grid-template-columns: 2fr 1fr;
-				}
-			}
 			.sectionTitle {
 				font-weight: 700;
 				font-size: var(--f-u8);
@@ -172,13 +163,6 @@ const featuredPost = posts[0];
 	<body class="container">
 		<Navbar />
 		<header class="home-hero">
-			<img
-				width="1600"
-				height="1131"
-				class="img"
-				src="../../../assets/astronauta.png"
-				sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
-			/>
 			<div class="gradient"></div>
 			<div class="gradient2"></div>
 			<div class="overlay">
@@ -195,53 +179,32 @@ const featuredPost = posts[0];
 			</div>
 		</header>
 		<main class="wrapper mt4 mb4">
-			<div class="grid">
-				<div class="section">
-					<h3 class="sectionTitle">Selected Work</h3>
-					<CardPreview
-						url={'/projects/' + featuredProject.frontmatter.slug}
-						img={featuredProject.frontmatter.img}
-						date={featuredProject.frontmatter.date}
-						tags={featuredProject.frontmatter.tags}
-						date={featuredProject.frontmatter.date}
-						description={featuredProject.frontmatter.description}
-					/>
-					<a href="/projects" class="home-button">
-						<Button>View All Projects</Button>
-					</a>
-					<h3 class="sectionTitle">Blog</h3>
-					<CardPreview
-						url={'/blog/' + featuredPost.frontmatter.slug}
-						img={featuredPost.frontmatter.img}
-						date={featuredPost.frontmatter.date}
-						tags={featuredPost.frontmatter.tags}
-						date={featuredPost.frontmatter.date}
-						description={featuredPost.frontmatter.description}
-					/>
-					<a href="/blog" class="home-button">
-						<Button>View Blog</Button>
-					</a>
-					<div class="tac mt4"></div>
-				</div>
-				<div class="section">
-					<h3 class="sectionTitle">About me</h3>
-					<p class="bio">
-						<span>Hello!</span> I’m Adonay, and this is my website. It was made using{
-							' '
-						}
-						<a
-							href="https://github.com/withastro/astro"
-							target="_blank"
-							rel="nofollow"
-						>
-							Astro
-						</a>, a new way to build static sites. This is just an example
-						template for you to modify.
-					</p>
-					<p>
-						<a href="/about">Read more</a>
-					</p>
-				</div>
+			<div class="section">
+				<h3 class="sectionTitle">Selected Work</h3>
+				<CardPreview
+					url={'/projects/' + featuredProject.frontmatter.slug}
+					img={featuredProject.frontmatter.img}
+					date={featuredProject.frontmatter.date}
+					tags={featuredProject.frontmatter.tags}
+					date={featuredProject.frontmatter.date}
+					description={featuredProject.frontmatter.description}
+				/>
+				<a href="/projects" class="home-button">
+					<Button>View All Projects</Button>
+				</a>
+				<h3 class="sectionTitle">Blog</h3>
+				<CardPreview
+					url={'/blog/' + featuredPost.frontmatter.slug}
+					img={featuredPost.frontmatter.img}
+					date={featuredPost.frontmatter.date}
+					tags={featuredPost.frontmatter.tags}
+					date={featuredPost.frontmatter.date}
+					description={featuredPost.frontmatter.description}
+				/>
+				<a href="/blog" class="home-button">
+					<Button>View Blog</Button>
+				</a>
+				<div class="tac mt4"></div>
 			</div>
 		</main>
 		<Footer />
