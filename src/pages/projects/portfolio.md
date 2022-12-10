@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../../layouts/InsideProjectsLayout.astro
 title: Portfolio
 author: Self
 date: 08/12/2022

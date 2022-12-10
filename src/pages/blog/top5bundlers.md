@@ -3,7 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: Top 5 Javascript bundlers
 date: 01/12/2022
 slug: top5bundlers
-img: ../../../public/assets/top-5-bundlers.webp
+img: /assets/top-5-bundlers.webp
 description: Most populars JavaScript bundlers
 author: Adonay Rodriguez
 tags:

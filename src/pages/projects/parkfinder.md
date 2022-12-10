@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../../layouts/InsideProjectsLayout.astro
 title: Parkfinder
 author: Self
 date: 06/12/2022
