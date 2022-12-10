@@ -1,24 +1,29 @@
 ---
-layout: ../../layouts/InsideProjectsLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: Portfolio
-author: Self
+type: project
 date: 08/12/2022
 slug: portfolio
-img: https://images.unsplash.com/photo-1548391350-1a529f6ea42d?fit=crop&w=1400&h=700&q=75
+img: /assets/portfolio.png
 description: |
-  We took some cool pictures of the moon and made a website about it.
+  This is my portfolio in order to showcase my skills.
+author: Self
 tags:
-  - design
+  - portfolio
   - dev
   - branding
 ---
 
-Rubber cheese mascarpone cut the cheese. Jarlsberg parmesan cheesy grin cream cheese port-salut stinking bishop ricotta brie. Roquefort when the cheese comes out everybody's happy goat cheese triangles stilton cheese and biscuits goat babybel. Bocconcini roquefort queso danish fontina pecorino.
+This portfolio is developed with astro.build, TypeScript and Solidjs. This website shows my work in different posts, allows you to know more about me and has a section of interesting posts focused on web development, such as tutorials and interesting articles.
 
-Smelly cheese stinking bishop roquefort. Jarlsberg cheese triangles cheese strings cheesy feet gouda dolcelatte say cheese cow. Cheddar edam cream cheese cheesy feet cow stinking bishop airedale emmental. Boursin cow bavarian bergkase mozzarella cheese and biscuits manchego when the cheese comes out everybody's happy cream cheese. Cheese on toast st. agur blue cheese croque monsieur halloumi.
+To create this website, I decided to use astro.build, a tool that allows you to create web applications quickly and easily using TypeScript. I liked the ease of use of astro.build and the flexibility it offered me to customise my website to my liking. In addition, I decided to use solidjs, to create components and control their states in order to have an excellent harmony between the astro components and the solidjs components.
 
-Fromage frais jarlsberg st. agur blue cheese. Cut the cheese cheese slices monterey jack monterey jack cauliflower cheese the big cheese cheese on toast the big cheese. Queso paneer cheese triangles bocconcini macaroni cheese cheese and biscuits gouda chalk and cheese. Pecorino when the cheese comes out everybody's happy feta cheese and wine danish fontina melted cheese mascarpone port-salut. When the cheese comes out everybody's happy pecorino cottage cheese.
+If you are a frontend developer and you are looking for a tool to create your own portfolio website, I recommend you to have a look at astro.build. It is easy to use, has a great community and allows you to create awesome web applications using TypeScript, solidjs, react, vue and others.
 
-Caerphilly parmesan manchego. Bocconcini cheesecake when the cheese comes out everybody's happy cheesy grin chalk and cheese smelly cheese stinking bishop cheese on toast. Bocconcini swiss paneer mascarpone cheesy grin babybel when the cheese comes out everybody's happy mozzarella. Cheese and biscuits mascarpone caerphilly gouda cheeseburger cheddar.
+All in all, I am very satisfied with my new portfolio website, developed with astro.build and solidjs, and I hope you like it as much as I do.
 
-Cheese and biscuits cheesy grin roquefort. Ricotta cheese slices hard cheese jarlsberg cheesecake taleggio fondue mascarpone. Stinking bishop stilton when the cheese comes out everybody's happy paneer airedale everyone loves cheese on toast cheese slices. Ricotta cut the cheese cheese triangles babybel cream cheese ricotta.
+## Read more about the process
+
+[Building the Front-End with Astro,typescript and solidJS](/404)
+
+[Repository on github](https://github.com/adonay1991/portfolio_blog)

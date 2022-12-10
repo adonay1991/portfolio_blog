@@ -1,24 +1,27 @@
 ---
-layout: ../../layouts/InsideProjectsLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: Parkfinder
 author: Self
 date: 06/12/2022
 slug: parkfinder
-img: https://images.unsplash.com/photo-1547234935-80c7145ec969?fit=crop&w=1400&h=700&q=75
+img: /assets/parkfinder.png
 description: |
-  We built an unofficial Mars Rover Landing site in celebration of NASA’s Perseverance Rover.
+  I have built an unofficial search engine for car parks in madrid.
 tags:
-  - design
   - dev
-  - branding
+  - frontend
 ---
 
-Rubber cheese mascarpone cut the cheese. Jarlsberg parmesan cheesy grin cream cheese port-salut stinking bishop ricotta brie. Roquefort when the cheese comes out everybody's happy goat cheese triangles stilton cheese and biscuits goat babybel. Bocconcini roquefort queso danish fontina pecorino.
+The application I have created using Angular and TypeScript is a parking search engine in Madrid. With this application, users can easily search and find available car parks in the city of Madrid
 
-Smelly cheese stinking bishop roquefort. Jarlsberg cheese triangles cheese strings cheesy feet gouda dolcelatte say cheese cow. Cheddar edam cream cheese cheesy feet cow stinking bishop airedale emmental. Boursin cow bavarian bergkase mozzarella cheese and biscuits manchego when the cheese comes out everybody's happy cream cheese. Cheese on toast st. agur blue cheese croque monsieur halloumi.
+The application has a friendly and easy to use user interface, which allows users to specify their location and search for nearby car parks. Once users find a car park they are interested in, they can view detailed information about it, including its address, opening and closing hours, and prices.
 
-Fromage frais jarlsberg st. agur blue cheese. Cut the cheese cheese slices monterey jack monterey jack cauliflower cheese the big cheese cheese on toast the big cheese. Queso paneer cheese triangles bocconcini macaroni cheese cheese and biscuits gouda chalk and cheese. Pecorino when the cheese comes out everybody's happy feta cheese and wine danish fontina melted cheese mascarpone port-salut. When the cheese comes out everybody's happy pecorino cottage cheese.
+In addition, the application also allows users to save their favourite car parks.
 
-Caerphilly parmesan manchego. Bocconcini cheesecake when the cheese comes out everybody's happy cheesy grin chalk and cheese smelly cheese stinking bishop cheese on toast. Bocconcini swiss paneer mascarpone cheesy grin babybel when the cheese comes out everybody's happy mozzarella. Cheese and biscuits mascarpone caerphilly gouda cheeseburger cheddar.
+In summary, our application using Angular and TypeScript is a useful tool for those looking for car parks in Madrid, allowing them to easily find and manage their favourite car parks.
 
-Cheese and biscuits cheesy grin roquefort. Ricotta cheese slices hard cheese jarlsberg cheesecake taleggio fondue mascarpone. Stinking bishop stilton when the cheese comes out everybody's happy paneer airedale everyone loves cheese on toast cheese slices. Ricotta cut the cheese cheese triangles babybel cream cheese ricotta.
+## Read more about the process
+
+[Building the Front-End with Angular and typescript](/404)
+
+[Repository on github](https://github.com/adonay1991/parkfinder-angular)

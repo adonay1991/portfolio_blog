@@ -3,6 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: esbuild
 date: 08/12/2022
 slug: esbuild
+type: post
 img: /assets/esbuild.webp
 description: An extremely fast JavaScript bundler
 author: Adonay Rodriguez
