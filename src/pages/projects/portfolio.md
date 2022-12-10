@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: Lunar Eclipse
+title: Portfolio
 author: Self
-date: 06/12/2022
-slug: lunar-eclipse
+date: 08/12/2022
+slug: portfolio
 img: https://images.unsplash.com/photo-1548391350-1a529f6ea42d?fit=crop&w=1400&h=700&q=75
 description: |
   We took some cool pictures of the moon and made a website about it.
