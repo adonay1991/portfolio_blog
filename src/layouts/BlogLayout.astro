@@ -2,12 +2,14 @@
 import MainHead from '@components/MainHead.astro';
 import Nav from '@components/Nav/Navbar';
 import Footer from '@components/Footer/Footer';
+
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<MainHead
-		title="Blog page"
+		title={`${title === 'Blog' ? 'Blog page' : 'Projects pages'}`}
 		description="A page to display all our blog posts"
 	/>
 	<body class="container">

@@ -10,10 +10,11 @@ export interface Props {
 	date: string;
 	img: string;
 	author: string;
+	type: string;
 }
 
 const {
-	frontmatter: { title, description, date, img, author },
+	frontmatter: { title, description, date, img, author, type },
 } = Astro.props;
 ---
 
@@ -40,7 +41,10 @@ const {
 				<div class="content"><slot /></div>
 			</div>
 			<div class="tac mt6">
-				<a href="/blog" class="layout-button">
+				<a
+					href={`${type === 'post' ? '/blog' : '/projects'}`}
+					class="layout-button"
+				>
 					<Button>View More</Button>
 				</a>
 			</div>
