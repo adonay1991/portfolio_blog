@@ -1,6 +1,6 @@
 ---
 import MainHead from '@components/MainHead.astro';
-import Nav from '@components/Nav/Navbar';
+import Header from '@components/Header/Header';
 import Footer from '@components/Footer/Footer';
 
 const { title } = Astro.props;
@@ -13,7 +13,7 @@ const { title } = Astro.props;
 		description="A page to display all our blog posts"
 	/>
 	<body class="container">
-		<Nav />
+		<Header client:only="solid-js" />
 		<div class="wrapper">
 			<h1 class="title mt4 mb4">All Post</h1>
 			<main class="blog-grid">

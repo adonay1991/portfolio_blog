@@ -1,6 +1,6 @@
 ---
 import MainHead from '@components/MainHead.astro';
-import Navbar from '@components/Nav/Navbar';
+import Header from '@components/Header/Header';
 import Footer from '@components/Footer/Footer';
 ---
 
@@ -23,7 +23,7 @@ import Footer from '@components/Footer/Footer';
 		</style>
 	</head>
 	<body>
-		<Navbar />
+		<Header client:only="solid-js" />
 		<div class="wrapper">
 			<h1>About Adonay</h1>
 			<div class="heroImg">
