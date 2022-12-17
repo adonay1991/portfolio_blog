@@ -1,4 +1,4 @@
-import { Component, createEffect, createSignal, onCleanup } from "solid-js";
+import { Component, createEffect, createSignal } from "solid-js";
 import './hamburger-icon.css'
 import './hamburguer-navbar.css'
 
@@ -10,12 +10,9 @@ export const HamburguerNavbar: Component = () => {
 			if (isExpanded())
 				setIsExpanded(false);
 		}
-		console.log(isExpanded());
-
 		document.addEventListener('click', handleClick, true);
-		// onCleanup(() => document.removeEventListener('click', handleClick, false));
-		// return () => document.removeEventListener('click', handleClick, true);
-	}, [isExpanded()]);;;
+		return () => document.removeEventListener('click', handleClick, true);
+	}, [isExpanded()]);
 
 
 	return (
