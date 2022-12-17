@@ -13,3 +13,34 @@
 	font-size: 12px;
 	text-transform: uppercase;
 }
+
+.social__footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.social__footer-icon {
+	display: block;
+}
+.social__footer-icon + .social__footer-icon {
+	margin-left: 0.75rem;
+}
+
+.socialicon__footer {
+	display: block;
+	width: 1.25rem;
+	height: 1.25rem;
+	fill: var(--t-subdue);
+	transition: fill linear 150ms;
+}
+
+.socialicon:hover {
+	fill: var(--c-black);
+}
+
+@media (min-width: 415px) {
+	.social__footer {
+		display: none;
+	}
+}
