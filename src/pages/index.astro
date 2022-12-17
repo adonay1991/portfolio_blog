@@ -1,9 +1,9 @@
 ---
 import MainHead from '@components/MainHead.astro';
-import Navbar from '@components/Nav/Navbar';
 import Button from '@components/Button/Button';
 import Footer from '@components/Footer/Footer';
 import CardPreview from '@components/CardPreview/CardPreview';
+import Header from '@components/Header/Header';
 
 const posts = await Astro.glob('../pages/blog/**/*.md');
 const projects = await Astro.glob('../pages/projects/**/*.md');
@@ -161,7 +161,7 @@ const featuredPost = posts[0];
 		</style>
 	</head>
 	<body class="container">
-		<Navbar />
+		<Header client:only="solid-js" />
 		<header class="home-hero">
 			<div class="gradient"></div>
 			<div class="gradient2"></div>
