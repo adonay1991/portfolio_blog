@@ -1,0 +1,13 @@
+.header-desktop {
+	display: none;
+}
+
+@media (min-width: 415px) {
+	.header-mobile {
+		display: none;
+	}
+
+	.header-desktop {
+		display: unset;
+	}
+}
