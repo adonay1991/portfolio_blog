@@ -10,13 +10,13 @@
 		"jsx": "preserve",
 		"jsxImportSource": "solid-js",
 		"noEmit": true,
-		"isolatedModules": true,
+		"isolatedModules": false,
 		"baseUrl": ".",
 		"paths": {
 			"@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
+			"@assets/*": ["src/assets/*"],
 			"@layouts/*": ["src/layouts/*"],
-			"pages/*": ["src/pages/*"],
+			"pages/*": ["src/pages/*"]
 		}
 	}
 }
