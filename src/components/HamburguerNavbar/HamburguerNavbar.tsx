@@ -5,48 +5,20 @@ import './hamburguer-navbar.css'
 declare module 'solid-js' {
 	namespace JSX {
 		interface Directives {
-			clickOutside: [() => any];
+			clickOutside: () => any;
 		}
 	}
 }
 
-// quedaste en ver que era el accessor porque te estaba dando un error
-// tambien tienes que ver lo del tema de la directiva, si va aqui o meterla en otro archivo
-// esta cambiada la tsconfig 	"isolatedModules": false, antes estaba a true, aqui te daba fallo al declarar la directiva
-
 export const HamburguerNavbar: Component = () => {
 
-	// const [isExpanded, setIsExpanded] = createSignal(false);
 	const [show, setShow] = createSignal(false);
 
-	function clickOutside(el: any, accessor: any) {
-		console.log(accessor);
-
+	function clickOutside(el: HTMLElement, accessor: () => any) {
 		const onClick = (e: any) => !el.contains(e.target) && accessor()?.();
 		document.body.addEventListener("click", onClick);
-
 		onCleanup(() => document.body.removeEventListener("click", onClick));
 	}
-
-	// createEffect(() => {
-	// 	let buttonExpanded = false;
-
-	// 	function handleClick(event: any) {
-	// 		const target = event.target;
-	// 		console.log(isExpanded());
-
-	// 		if (target.classList.contains('hamburger')) {
-	// 			buttonExpanded = !buttonExpanded;
-	// 		} else {
-	// 			buttonExpanded = false;
-	// 		}
-	// 		setIsExpanded(buttonExpanded);
-	// 	}
-	// 	document.addEventListener('click', handleClick, true);
-	// 	return () => document.removeEventListener('click', handleClick, true);
-	// }, [isExpanded()]);
-
-
 
 	return (
 		<div class='hamburger-navbar'>
@@ -60,7 +32,7 @@ export const HamburguerNavbar: Component = () => {
 						aria-haspopup={true}
 						aria-controls="navigation"
 						class={`hamburger hamburger--squeeze ${show() ? 'is-active' : ''}`}
-						onClick={(e) => setShow(true)}>
+						onClick={() => setShow(true)}>
 						<span class='hamburger-box'>
 							<span
 								class='hamburger-inner'
@@ -74,7 +46,7 @@ export const HamburguerNavbar: Component = () => {
 					aria-haspopup={true}
 					aria-controls="navigation"
 					class={`hamburger hamburger--squeeze ${show() ? 'is-active' : ''}`}
-					onClick={(e) => setShow(false)}>
+					onClick={() => setShow(false)}>
 					<span class='hamburger-box'>
 						<span
 							class='hamburger-inner'
@@ -83,7 +55,7 @@ export const HamburguerNavbar: Component = () => {
 					</span>
 				</button>
 				<nav
-					use:clickOutside={[() => setShow(false)]}
+					use:clickOutside={() => setShow(false)}
 					aria-label="main menu"
 					data-show={show()}
 					class='hamburger-navbar__menu'>
